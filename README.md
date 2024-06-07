@@ -63,7 +63,7 @@ FoSp
 ├── tools
 ├── config
 ├── data
-│   ├── SMOKE5K/SYN70K/SmokeSeg
+│   ├── [Your Dataset]
 │   │   ├── JPEGImages
 │   │   ├── SegmentationClass
 │   │   ├── ImageSets
