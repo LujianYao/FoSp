@@ -14,3 +14,68 @@ It can be observed that our FoSp can obtain finer foreground for both small and 
 ![Visualization](imgs/FoSp_prediction.png)
 
 
+## Main code infrastructure
+- [fosp_config.py](config/fosp_config.py)
+    - This script establishes the general configuration of FoSp, encompassing dataset, training, and testing settings, among others.
+- [FOSP_main.py](mmseg/models/decode_heads/FOSP_main.py)
+    - This script includes the implementation of Bidirectional Cascade Generator (BCG), Separation module, and Domain Fusion module in our FoSp method.
+
+## Prerequisites
+- Linux
+- Python 3.8
+- PyTorch 1.8.0
+- Cuda 11.1
+- GCC 7.3.0+
+ 
+
+## Installation
+**Step 1.** create new environment.
+```shell
+conda create -n FoSp python=3.8 -y
+conda activate FoSp
+```
+
+**Step 2.** Install [MMCV](https://github.com/open-mmlab/mmcv) using [MIM](https://github.com/open-mmlab/mim).
+
+```shell
+pip install -U openmim
+mim install mmcv-full
+```
+
+**Step 3.** Install FoSp.
+
+```shell
+cd FoSp
+pip install -v -e .
+```
+
+**Step 4.** Install other packages.
+```shell
+pip install -r requirements.txt
+```
+
+## Dataset preparation
+The Dataset structure employs the file directory format of the PASCAL VOC. We have utilized a limited number of images as training examples. If you need to use your own dataset, please switch it to this format.
+
+```shell
+FoSp
+├── mmseg
+├── tools
+├── config
+├── data
+│   ├── SMOKE5K/SYN70K/SmokeSeg
+│   │   ├── JPEGImages
+│   │   ├── SegmentationClass
+│   │   ├── ImageSets
+│   │   │   ├── Segmentation
+```
+
+## Training
+```shell
+python tools/train.py config/fosp_config.py
+```
+## Evaluation
+```shell
+python tools/test.py --config ${path/to/config} --checkpoint ${path/to/checkpoint}
+```
+
