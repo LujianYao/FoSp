@@ -79,3 +79,21 @@ python tools/train.py config/fosp_config.py
 python tools/test.py --config ${path/to/config} --checkpoint ${path/to/checkpoint}
 ```
 
+## Citation
+
+If you find our work useful in your research, please consider citing:
+
+```bibtex
+@inproceedings{yao2024fosp,
+  title={FoSp: Focus and separation network for early smoke segmentation},
+  author={Yao, Lujian and Zhao, Haitao and Peng, Jingchao and Wang, Zhongze and Zhao, Kaijie},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={7},
+  pages={6621--6629},
+  year={2024}
+}
+```
+
+## References
+This code uses the [MMSegmentation](https://github.com/open-mmlab/mmsegmentation) framework. Please see [train](https://github.com/open-mmlab/mmsegmentation/blob/master/docs/en/train.md) and [inference](https://github.com/open-mmlab/mmsegmentation/blob/master/docs/en/inference.md) for the detailed usage of MMSegmentation.
