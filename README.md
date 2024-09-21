@@ -70,6 +70,8 @@ FoSp
 │   │   │   ├── Segmentation
 ```
 
+The SmokeSeg Dataset will be provided on [request](https://forms.gle/7WAjTo71XpQYPFSB9).
+
 ## Training
 ```shell
 python tools/train.py config/fosp_config.py
