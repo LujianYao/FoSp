@@ -63,14 +63,14 @@ FoSp
 ├── tools
 ├── config
 ├── data
-│   ├── {Your Dataset}
+│   ├── SmokeSeg
 │   │   ├── JPEGImages
 │   │   ├── SegmentationClass
-│   │   ├── ImageSets
+│   │   ├── SmokeSeg_ImageSets
 │   │   │   ├── Segmentation
 ```
 
-The SmokeSeg Dataset will be provided on [request](https://forms.gle/7WAjTo71XpQYPFSB9).
+The SmokeSeg Dataset can be downloaded on [Google Drive](https://drive.google.com/file/d/1iitPPmH9ZuAa-6E2LNqgEz39yt4MXT-v/view?usp=sharing). The raw smoke images are sourced from FigLib [1]. Thanks for their amazing work.
 
 ## Training
 ```shell
@@ -80,6 +80,24 @@ python tools/train.py config/fosp_config.py
 ```shell
 python tools/test.py --config ${path/to/config} --checkpoint ${path/to/checkpoint}
 ```
+
+
+
+## Acknowledgement
+
+1. The most raw smoke images are sourced from FigLib [1]. Thanks for their amazing work.
+
+2. This code uses the [MMSegmentation](https://github.com/open-mmlab/mmsegmentation) [2] framework. Please see [train](https://github.com/open-mmlab/mmsegmentation/blob/master/docs/en/train.md) and [inference](https://github.com/open-mmlab/mmsegmentation/blob/master/docs/en/inference.md) for the detailed usage of MMSegmentation.
+
+3. The inpainting part mainly draws on the work and code from MAT [3], and thanks for their sharing.
+
+## References
+[1] Dewangan, Anshuman, et al. "FIgLib & SmokeyNet: Dataset and deep learning model for real-time wildland fire smoke detection." Remote Sensing 14.4 (2022): 1007.
+
+[2] Contributors, MMSegmentation. "OpenMMLab semantic segmentation toolbox and benchmark." 2023-08-27]. https://github.com/open-mmlab/mmsegmentation (2020).
+
+[3] Li, Wenbo, et al. "Mat: Mask-aware transformer for large hole image inpainting." Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. 2022.
+
 
 ## Citation
 
@@ -96,6 +114,3 @@ If you find our work useful in your research, please consider citing:
   year={2024}
 }
 ```
-
-## References
-This code uses the [MMSegmentation](https://github.com/open-mmlab/mmsegmentation) framework. Please see [train](https://github.com/open-mmlab/mmsegmentation/blob/master/docs/en/train.md) and [inference](https://github.com/open-mmlab/mmsegmentation/blob/master/docs/en/inference.md) for the detailed usage of MMSegmentation.
