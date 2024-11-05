@@ -70,7 +70,7 @@ FoSp
 │   │   │   ├── Segmentation
 ```
 
-The SmokeSeg Dataset can be downloaded on [Google Drive](https://drive.google.com/file/d/1iitPPmH9ZuAa-6E2LNqgEz39yt4MXT-v/view?usp=sharing). The raw smoke images are sourced from FigLib [1]. Thanks for their amazing work.
+The SmokeSeg Dataset can be downloaded on [Google Drive](https://drive.google.com/file/d/1AIHZ5PckjHGqeaG3VY5WZgH-Y-5lAzA0/view?usp=sharing). The dataset split can be found in `data/SmokeSeg/SmokeSeg_ImageSets/Segmentation`. The raw smoke images are sourced from FigLib [1]. Thanks for their amazing work.
 
 ## Training
 ```shell
